@@ -30,11 +30,10 @@ public class Program {
 		 * p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase()); }
 		 * // CLASSE ANONIMA
 		 */
+		//em uma única linha
+		//Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase());
 
-		Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase()
-				.compareToIgnoreCase(p2.getName().toUpperCase());
-
-		list.sort(comp);
+		list.sort((p1, p2) -> p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase()));
 
 		for (Product p : list) {
 			System.out.println(p);
