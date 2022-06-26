@@ -10,30 +10,28 @@ public class Program {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
-		
-		List<Product> list = new ArrayList<Product>();
-		
-		list.add(new Product("TV",900.00));
-		list.add(new Product("Notebook",1200.00));
-		list.add(new Product("Tablet",450.00));
-		
-		Comparator<Product> comp = new Comparator<Product>() {
 
-			@Override
-			public int compare(Product p1, Product p2) {
-				// TODO Auto-generated method stub
-				return p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase());
-			} // CLASSE ANONIMA
-			
-			
+		List<Product> list = new ArrayList<Product>();
+
+		list.add(new Product("TV", 900.00));
+		list.add(new Product("Notebook", 1200.00));
+		list.add(new Product("Tablet", 450.00));
+
+		// Expressão Lambda - função anonima
+		Comparator<Product> comp = (p1, p2) -> {
+			return p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase());
 		};
-		
+
+		/*
+		 * @Override public int compare(Product p1, Product p2) { // TODO Auto-generated
+		 * method stub return
+		 * p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase()); }
+		 * // CLASSE ANONIMA
+		 */
+
 		list.sort(comp);
-		
-		for(Product p : list)
-		{
+
+		for (Product p : list) {
 			System.out.println(p);
 		}
 
