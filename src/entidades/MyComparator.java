@@ -10,6 +10,7 @@ public class MyComparator implements Comparator<Product> {
 		return p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase());
 		
 		//compara os produtos por nome com letras maíusculas ou minúsculas sem dependência
+		// compareToIgnoreCase
 		 
 	}
 	 

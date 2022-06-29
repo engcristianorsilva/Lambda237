@@ -33,7 +33,7 @@ public class Program {
 		//em uma única linha
 		//Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase());
 
-		list.sort((p1, p2) -> p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase()));
+		list.sort((p1, p2) -> p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase()));//IMPORTANTE
 
 		for (Product p : list) {
 			System.out.println(p);
