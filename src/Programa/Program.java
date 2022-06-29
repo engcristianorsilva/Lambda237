@@ -1,7 +1,6 @@
 package Programa;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 import entidades.Product;
@@ -17,10 +16,10 @@ public class Program {
 		list.add(new Product("Notebook", 1200.00));
 		list.add(new Product("Tablet", 450.00));
 
-		// Expressão Lambda - função anonima
+		// Expressão Lambda - Classe anônima
 		/*
 		 * Comparator<Product> comp = (p1, p2) -> { return
-		 * p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase());
+		 * p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase()); LAMBDA COM CHAVES
 		 * };
 		 */
 
@@ -28,9 +27,10 @@ public class Program {
 		 * @Override public int compare(Product p1, Product p2) { // TODO Auto-generated
 		 * method stub return
 		 * p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase()); }
-		 * // CLASSE ANONIMA
+		 * // CLASSE ANONIMA LAMBADA SEM CHAVES
 		 */
-		//em uma única linha
+		
+		//em uma única linha - LAMBDA DECLARANDO COM UMA ÚNICA LINHA
 		//Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase());
 
 		list.sort((p1, p2) -> p1.getName().toUpperCase().compareToIgnoreCase(p2.getName().toUpperCase()));//IMPORTANTE
